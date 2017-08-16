@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Users Index</title>
+    <link rel="stylesheet" href="/static/restusers_app/master.css">
+</head>
+
+<body>
+    <h1>Users</h1>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Actions</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.fullname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.created_at}}</td>
+            <td>{{user.updated_at}}</td>
+            <td>
+                <a href="/users/{{ user.id}}/show">Show</a>
+                <a href="/users/{{ user.id}}/edit">Edit</a>
+                <a href="/users/{{ user.id}}/delete">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/users/new">Add a new User</a>
+
+</body>
+
+</html>
