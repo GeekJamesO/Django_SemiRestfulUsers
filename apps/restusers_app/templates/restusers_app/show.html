@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>User {{user.id}}</title>
+        <link rel="stylesheet" href="/static/restusers_app/master.css">
+    </head>
+    <body>
+        <h1>User {{user.id}}</h1>
+
+        Full Name: {{user.fullname}}<br>
+        Email: {{user.email}}<br>
+        Created at: {{user.created_at}}<br>
+
+        <a href="/{{ user.id}}/edit">Edit</a> |
+        <a href="/{{ user.id}}/delete">Delete</a><br>
+    </body>
+</html>

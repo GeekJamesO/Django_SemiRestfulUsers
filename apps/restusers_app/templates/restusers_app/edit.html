@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Edit User</title>
+        <link rel="stylesheet" href="/static/restusers_app/master.css">
+    </head>
+    <body>
+        <h1>Edit User {{user.id}}</h1>
+        <form class="" action="/users/{{number}}" method="post">
+            {% csrf_token %}
+            <label for="firstname">First Name</label>
+            <input class="editbox" type="text" name="firstname" value="{{inFirstname}}"> <br>
+            <label for="lastname">Last Name</label>
+            <input class="editbox" type="text" name="lastname" value="{{inLastname}}"> <br>
+            <label for="email">Email</label>
+            <input class="editbox" type="text" name="email" value="{{user.email}}"> <br>
+            <button type="submit" name="submit">Update</button>
+        </form>
+
+        <a href="/users/{{ user.id}}/show">{{user.fullname}}Show</a> |
+        <a href="/users/index">Go Back</a><br>
+    </body>
+</html>

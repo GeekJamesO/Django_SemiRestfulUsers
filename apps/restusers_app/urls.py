@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^(?P<number>\d+)/delete$', views.destroy),
     url(r'^(?P<number>\d+)/update$', views.update),
     url(r'^(?P<number>\d+)$', views.show),
-    # url(r'^', views.index),
+    url(r'^(?P<number>\d+)/$', views.show),
+    url(r'^$', views.index),
 ]

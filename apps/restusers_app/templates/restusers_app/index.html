@@ -21,7 +21,7 @@
         {% for user in users %}
         <tr>
             <td>{{user.id}}</td>
-            <td>{{user.fullname}}</td>
+            <td><a href="/users/{{ user.id}}/show">{{user.fullname}}</a></td>
             <td>{{user.email}}</td>
             <td>{{user.created_at}}</td>
             <td>{{user.updated_at}}</td>
