@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Users New</title>
+    </head>
+    <body>
+        <h1>Add a new user</h1>
+        <form class="" action="/create" method="post">
+            {% csrf_token %}
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" placeholder="enter first name" required=true value="">
+            <br>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" placeholder="enter last name" required=true value="">
+            <br>
+
+            <label for="first_name">First Name:</label>
+            <input type="email" name="email" placeholder="email@server.com" required=true value="">
+            <br>
+
+            <button type="submit" name="submit">Create</button>
+            <button type="reset" name="reset">Reset</button>
+            <br>
+
+            <a href="/">Go Back</a>
+            </form>
+    </body>
+</html>
